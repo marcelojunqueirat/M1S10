@@ -23,8 +23,14 @@ export const MedicamentoContextProvider = ({ children }) => {
     localStorage.setItem("listaMedicamentos", JSON.stringify(novaLista))
   }
 
-  const FavoritarMedicamento = () => {
-    return alert('Sou o botão de favoritar')
+  const FavoritarMedicamento = (id) => {
+    const lista = listaMedicamentos.map((item) => {
+      if(item.id == id){
+        item.favorito = !item.favorito
+      }
+      return item
+    })
+    setListaMedicamentos(lista)
   }
 
   return (
