@@ -10,7 +10,6 @@ export const MedicamentoContextProvider = ({ children }) => {
       alert('Preencha todas as informações!')
       return
     }
-
     const novoMedicamento = {
       id: listaMedicamentos.length +1,
       nome: nome,
@@ -18,7 +17,6 @@ export const MedicamentoContextProvider = ({ children }) => {
       preco: preco,
       favorito: false
     }
-
     const novaLista = [...listaMedicamentos, novoMedicamento]
     setListaMedicamentos(novaLista)
     alert('Medicamento cadastrado com sucesso!')
@@ -28,7 +26,6 @@ export const MedicamentoContextProvider = ({ children }) => {
   const FavoritarMedicamento = () => {
     return alert('Sou o botão de favoritar')
   }
-
 
   return (
     <MedicamentoContext.Provider value={{ listaMedicamentos, AdicionarMedicamento, FavoritarMedicamento }}>
