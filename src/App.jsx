@@ -2,6 +2,7 @@ import './App.css'
 import Header from './components/Header'
 import FormularioNovoMedicamento from './components/FormularioNovoMedicamento'
 import CardMedicamento from './components/CardMedicamento'
+import GridMedicamentos from './components/gridMedicamentos'
 import { MedicamentoContext } from './context/MedicamentoContext'
 import { useContext } from 'react'
 
@@ -13,7 +14,7 @@ function App() {
     <>
       <Header />
       <FormularioNovoMedicamento />
-      <CardMedicamento key={listaMedicamentos[0].id} medicamento={listaMedicamentos[0]} />
+      <GridMedicamentos listaMedicamentos={listaMedicamentos} />
     </>
   )
 }

@@ -15,7 +15,7 @@ function FormularioNovoMedicamento() {
     AdicionarMedicamento(nome, laboratorio, preco)
     setNome("")
     setLaboratorio("")
-    setPreco(0)
+    setPreco("")
   }
   
   return (
