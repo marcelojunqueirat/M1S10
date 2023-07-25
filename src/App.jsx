@@ -2,7 +2,7 @@ import './App.css'
 import Header from './components/Header'
 import FormularioNovoMedicamento from './components/FormularioNovoMedicamento'
 import CardMedicamento from './components/CardMedicamento'
-import GridMedicamentos from './components/gridMedicamentos'
+import GridMedicamentos from './components/GridMedicamentos'
 import { MedicamentoContext } from './context/MedicamentoContext'
 import { useContext } from 'react'
 
