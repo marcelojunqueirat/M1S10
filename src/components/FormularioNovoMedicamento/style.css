@@ -1,0 +1,20 @@
+
+h2 {
+  padding: 1em;
+  text-align: center;
+}
+
+form {
+  padding: 0.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+input {
+  margin: 1em;
+  height: 40px;
+  width: 300px;
+  border-radius: 4px;
+}
