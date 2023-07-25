@@ -1,7 +1,10 @@
 import './style.css'
-import { useState } from "react"
+import { useState, useContext } from "react"
+import { MedicamentoContext } from "../../context/MedicamentoContext"
 
 function FormularioNovoMedicamento() {
+  const {AdicionarMedicamento} = useContext(MedicamentoContext)
+
   const [nome, setNome] = useState('')
   const [laboratorio, setLaboratorio] = useState('')
   const [preco, setPreco] = useState('')
@@ -9,7 +12,10 @@ function FormularioNovoMedicamento() {
   const handleSubmit = (e) => {
     e.preventDefault()
 
-    alert('Cadastro teste sucesso!')
+    AdicionarMedicamento(nome, laboratorio, preco)
+    setNome("")
+    setLaboratorio("")
+    setPreco(0)
   }
   
   return (
